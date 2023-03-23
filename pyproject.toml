@@ -63,6 +63,7 @@ use_parentheses = true
 atomic = true
 lines_between_types = 1
 combine_as_imports = true
+include_trailing_comma = true
 
 [tool.yapf]
 # https://github.com/google/yapf#formatting-style
