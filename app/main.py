@@ -21,7 +21,7 @@ def run_http(
     logging.basicConfig(level=settings.log_level)
     log_config = uvicorn.config.LOGGING_CONFIG
     log_config["formatters"]["access"]["fmt"] = settings.uvicorn_access_fmt
-    uvicorn.run("app.main:app", host=host, port=port, reload=reload)
+    uvicorn.run(app, host=host, port=port, reload=reload)
 
 
 def main():
