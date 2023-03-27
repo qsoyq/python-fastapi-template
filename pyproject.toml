@@ -102,6 +102,7 @@ ignore_patterns = [".venv/**/*.py", ".tox/**/*.py", "**/*.pxd", "**/*.pyx"]
 warn_return_any = true
 warn_unused_configs = true
 ignore_missing_imports = false
+check_untyped_defs = true
 plugins = ["pydantic.mypy"]
 exclude = ['^venv/', '^__init__\.py$']
 
