@@ -16,8 +16,6 @@ RUN pip install pretty_errors && python -m pretty_errors -s
 
 COPY --from=0 requirements.txt requirements.txt 
 
-RUN cat requirements.txt
-
 RUN pip install -r requirements.txt
 
 RUN mkdir -p /logs
