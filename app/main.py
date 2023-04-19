@@ -6,10 +6,11 @@ import uvicorn.config
 
 from fastapi import FastAPI
 
+from app import __version__
 from app.settings import settings
 
 _typer = typer.Typer()
-app = FastAPI()
+app = FastAPI(version=__version__)
 
 
 @_typer.command()
