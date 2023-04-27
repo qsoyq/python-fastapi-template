@@ -12,6 +12,8 @@ RUN poetry run pip freeze > requirements.txt
 
 FROM python:3.10-alpine as prod
 
+RUN apk add curl
+
 RUN pip install pretty_errors && python -m pretty_errors -s
 
 COPY --from=0 requirements.txt requirements.txt 
