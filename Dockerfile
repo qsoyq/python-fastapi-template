@@ -8,7 +8,7 @@ COPY poetry.lock poetry.lock
 
 RUN poetry install --no-dev
 
-RUN poetry run pip freeze > requirements.txt 
+RUN poetry export > requirements.txt 
 
 FROM python:3.10-alpine as prod
 
