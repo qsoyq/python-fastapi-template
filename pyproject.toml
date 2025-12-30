@@ -14,7 +14,7 @@ dependencies = [
     "httpx[http2,socks]",
     "hypercorn",
     "pretty-errors",
-    "typer[standard]",
+    "typer",
     "ruff",
     "types-pyyaml",
     "python-multipart",
