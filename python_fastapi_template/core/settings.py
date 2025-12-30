@@ -22,4 +22,4 @@ class AppSettings(BaseSettings):
     basic_auth: HttpAuthSettings = HttpAuthSettings()
 
     # meta
-    model_config = SettingsConfigDict(env_file='.env')
+    model_config = SettingsConfigDict(env_file='.env', extra='ignore')
