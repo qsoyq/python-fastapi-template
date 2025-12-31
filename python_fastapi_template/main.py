@@ -24,7 +24,6 @@ def http(
     log_level: int = typer.Option(logging.DEBUG, '--log_level', envvar='log_level'),
 ):
     """启动 http 服务"""
-    initial(app)
     init_logger(log_level)
     logging.info(f"http server listening on {host}:{port}")
     uvicorn.run(app, host=host, port=port, reload=reload)
