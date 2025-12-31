@@ -10,8 +10,11 @@ from python_fastapi_template.core.settings import AppSettings
 from python_fastapi_template.utils.mermaid import load_mermaid_plugin
 
 
-def include_routers(app: FastAPI, module_name: str = 'python_fastapi_template.applications.app'):
-    api_prefix = AppSettings().api_prefix
+def include_routers(
+    app: FastAPI, module_name: str = 'python_fastapi_template.applications', api_prefix: str | None = None
+):
+    if api_prefix is None:
+        api_prefix = AppSettings().api_prefix
 
     pkg = importlib.import_module(module_name)
     prefix = pkg.__name__ + '.'
