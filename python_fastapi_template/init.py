@@ -11,17 +11,17 @@ from python_fastapi_template.utils.mermaid import load_mermaid_plugin
 
 
 def include_routers(
-    app: FastAPI, module_name: str = 'python_fastapi_template.applications', api_prefix: str | None = None
+    app: FastAPI, module_name: str = "python_fastapi_template.applications", api_prefix: str | None = None
 ):
     if api_prefix is None:
         api_prefix = AppSettings().api_prefix
 
     pkg = importlib.import_module(module_name)
-    prefix = pkg.__name__ + '.'
+    prefix = pkg.__name__ + "."
 
     for _, mod_name, _ in pkgutil.walk_packages(pkg.__path__, prefix):
         mod = importlib.import_module(mod_name)
-        router = getattr(mod, 'router', None)
+        router = getattr(mod, "router", None)
         if router is None:
             continue
         app.include_router(router, prefix=api_prefix)

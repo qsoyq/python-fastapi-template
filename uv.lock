@@ -966,7 +966,7 @@ wheels = [
 
 [[package]]
 name = "python-fastapi-template"
-version = "0.1.0"
+version = "0.1.5"
 source = { editable = "." }
 dependencies = [
     { name = "asyncache" },
@@ -1013,7 +1013,7 @@ requires-dist = [
     { name = "pytz", specifier = ">=2025.2" },
     { name = "requests", specifier = ">=2.32.5" },
     { name = "ruff" },
-    { name = "typer", extras = ["standard"] },
+    { name = "typer" },
     { name = "types-pyyaml" },
     { name = "uvicorn" },
 ]
